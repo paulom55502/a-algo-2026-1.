@@ -1,0 +1,19 @@
+def eh_palindromo(arr, esq=0, dir=None):
+  
+    if dir is None:
+        dir = len(arr) - 1
+
+   
+    if esq >= dir:
+        return True
+
+   
+    if arr[esq] != arr[dir]:
+        return False
+
+    return eh_palindromo(arr, esq + 1, dir - 1)
+
+print(eh_palindromo([0, 1, 2, 3, 2, 1, 0]))       # True
+print(eh_palindromo(["a", "b", "b", "a"]))         # True
+print(eh_palindromo(["a", "b", "c", "b", "a"]))    # True
+print(eh_palindromo(["a", "b", "c", "f", "b", "a"])) # False
