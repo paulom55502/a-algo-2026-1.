@@ -1,1 +1,9 @@
+#Fatorial recurssivo
+def F(n):
+    if n == 1:
+        return 2
 
+  return 2 * F(n - 1) + n ** 2
+
+n = int(input("Digite o valor de n: "))
+print(f"F({'{'}n{'}'}) = {'{'}F(n){'}'}")
